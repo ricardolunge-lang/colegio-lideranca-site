@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Colégio Liderança COC | Barra Velha</title>
+<meta name="description" content="Colégio Liderança COC chega a Barra Velha. Mais de quatro décadas de experiência e uma estrutura pensada para o futuro.">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: moldura arredondada sobre fundo claro, hero fotográfico de tela cheia, cartões suaves */
+:root{
+  --escuro:#0b3a1a; --verde:#2f8f1f; --amarelo:#f5c518; --amarelo-s:#fff4c4;
+  --fundo:#ffffff; --cinza:#f5f4f0; --texto:#183326; --suave:#647368; --linha:#e7e6e0;
+  --display:"Lexend",system-ui,sans-serif; --corpo:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--corpo);background:var(--fundo);color:var(--texto);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+.ico{flex:none}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.chip{display:inline-flex;align-items:center;font-size:.64rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--linha);background:#fff;border-radius:999px;padding:5px 12px;color:var(--escuro)}
+.seta{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#fff;color:var(--escuro);box-shadow:0 2px 10px rgba(0,0,0,.06);transition:transform .25s,background .25s}
+a:hover .seta,.seta:hover{transform:rotate(45deg);background:var(--amarelo)}
+.btn{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.9rem}
+.btn span{background:var(--amarelo);color:var(--escuro);padding:12px 22px;border-radius:999px}
+.btn i{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--amarelo);color:var(--escuro)}
+.btn:hover i{transform:rotate(45deg)}.btn i{transition:transform .25s}
+
+/* HERO */
+.moldura{padding:14px}
+.hero{position:relative;border-radius:28px;overflow:hidden;min-height:640px;color:#fff;display:flex;flex-direction:column;
+  background:linear-gradient(135deg,#1d5e2c,var(--escuro))}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,30,14,.72),rgba(6,30,14,.2) 60%,rgba(6,30,14,.05)),linear-gradient(to top,rgba(6,30,14,.55),transparent 40%)}
+.hero>*:not(img){position:relative;z-index:2}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 34px}
+.logo{background:#fff;border-radius:12px;padding:4px 12px;display:flex}
+.logo img{height:38px;width:auto}
+.nav ul{display:flex;gap:30px;list-style:none;font-size:.86rem;font-weight:500}
+.nav ul a{opacity:.9}.nav ul a:hover{opacity:1;color:var(--amarelo)}
+.nav .ct{background:var(--amarelo);color:var(--escuro);font-weight:600;font-size:.86rem;padding:11px 22px;border-radius:999px}
+@media(max-width:900px){.nav ul{display:none}}
+.hero .txt{margin-top:auto;padding:0 34px 40px;max-width:720px}
+.hero .loc{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--amarelo);margin-bottom:16px}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,5.4vw,4.2rem);line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+.hero h1 b{font-weight:600}
+.hero p{margin:18px 0 28px;max-width:48ch;color:#e5efe7}
+.abas{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:0 34px 30px}
+.abas div{background:rgba(255,255,255,.16);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:16px 20px;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.abas div:first-child{background:#fff;color:var(--escuro)}
+.abas b{display:block;font-family:var(--display);font-size:1.25rem;letter-spacing:0;text-transform:none;font-weight:500;margin-top:2px}
+@media(max-width:760px){.hero{min-height:600px}.nav,.hero .txt,.abas{padding-left:20px;padding-right:20px}.abas{grid-template-columns:1fr}.abas div:not(:first-child){display:none}}
+
+/* 3 cartões */
+section{padding:90px 0}
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cd{background:var(--cinza);border-radius:24px;padding:22px 22px 0;display:flex;flex-direction:column;min-height:420px;overflow:hidden}
+.cd .topo{display:flex;justify-content:space-between;align-items:flex-start}
+.cd h3{font-family:var(--display);font-weight:500;font-size:1.15rem;line-height:1.35;margin:14px 0 22px;color:var(--escuro);text-wrap:balance}
+.cd .im{margin-top:auto;border-radius:18px 18px 0 0;overflow:hidden;height:210px;background:linear-gradient(160deg,var(--verde),var(--escuro));position:relative}
+.cd .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cd.am{background:var(--amarelo);padding:0}
+.cd.am .im{margin:12px 12px 0;height:270px;border-radius:18px 18px 18px 60px;flex:none}.cd.am .im img{object-position:center 40%}
+.cd.am .base{padding:20px 22px 22px;margin-top:auto}
+.cd.am h3{margin:12px 0 0}
+.cd.am .base .row{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.cd.am .chip{background:transparent;border-color:rgba(11,58,26,.25)}
+.forma{position:absolute;inset:0;pointer-events:none}
+@media(max-width:900px){.tres{grid-template-columns:1fr}}
+
+/* Estrutura */
+.estr{background:var(--cinza);border-radius:28px;margin:0 14px;padding:90px 0}
+.centro{text-align:center;margin-bottom:46px}
+.centro h2{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,3.8vw,2.8rem);line-height:1.15;color:var(--escuro);margin-top:16px;text-wrap:balance}
+.centro p{color:var(--suave);max-width:56ch;margin:14px auto 0}
+.quatro{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sv{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(160deg,var(--verde),var(--escuro));color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:20px}
+.sv img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.sv:hover img{transform:scale(1.05)}
+.sv::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,30,14,.85),transparent 55%)}
+.sv>*:not(img){position:relative;z-index:2}
+.sv .badge{width:46px;height:46px;border-radius:50%;background:var(--amarelo);color:var(--escuro);display:grid;place-items:center}
+.sv h3{font-family:var(--display);font-weight:500;font-size:1.25rem}
+.sv p{font-size:.88rem;color:#dfeae2;margin-top:4px}
+@media(max-width:900px){.quatro{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.quatro{grid-template-columns:1fr}.sv{aspect-ratio:4/3}}
+.nota{margin-top:14px;font-size:.74rem;color:var(--suave);text-align:center}
+
+/* história */
+.hist{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hist h2{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1.15;color:var(--escuro);margin:16px 0;text-wrap:balance}
+.hist p{color:var(--suave);margin-bottom:14px;max-width:58ch}
+.cit{font-family:var(--display);font-size:1.15rem;color:var(--escuro);border-left:3px solid var(--amarelo);padding-left:18px;margin:22px 0}
+.nums{display:flex;gap:16px;margin-top:24px}
+.nums div{background:var(--cinza);border-radius:18px;padding:18px 22px;flex:1}
+.nums b{font-family:var(--display);font-size:2rem;font-weight:500;color:var(--escuro);display:block;line-height:1.1}
+.nums small{color:var(--suave);font-size:.8rem}
+.hist .foto{border-radius:24px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(160deg,var(--verde),var(--escuro));position:relative}
+.hist .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media(max-width:860px){.hist{grid-template-columns:1fr}}
+
+
+/* sticky cards */
+.seg{padding:100px 0}
+.seg .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.seg .lado{position:sticky;top:40px}
+.seg .lado h2,.dif h2,.faq h2{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1.15;color:var(--escuro);margin:16px 0;text-wrap:balance}
+.seg .lado p{color:var(--suave);margin-bottom:14px}
+.pilha{display:grid;gap:26px}
+.st{position:sticky;border-radius:26px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;min-height:400px;box-shadow:0 -12px 40px -20px rgba(6,30,14,.35)}
+.st:nth-child(1){top:40px;background:#fff;border:1px solid var(--linha)}
+.st:nth-child(2){top:64px;background:var(--amarelo)}
+.st:nth-child(3){top:88px;background:var(--escuro);color:#fff}
+.st:nth-child(4){top:112px;background:var(--cinza)}
+.st .tx{padding:32px;display:flex;flex-direction:column;gap:12px}
+.st .idade{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
+.st h3{font-family:var(--display);font-weight:500;font-size:1.6rem;line-height:1.15}
+.st p{font-size:.92rem;opacity:.85}
+.st ul{list-style:none;display:grid;gap:8px;margin-top:auto;font-size:.88rem}
+.st li{display:flex;gap:8px;align-items:flex-start}
+.st li svg{margin-top:3px;flex:none}
+.st .ft{position:relative;background:linear-gradient(160deg,var(--verde),var(--escuro))}
+.st .ft img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media(max-width:860px){.seg .wrap{grid-template-columns:1fr}.seg .lado{position:static}.st{grid-template-columns:1fr}.st .ft{height:200px;order:-1}}
+/* diferenciais */
+.dif{padding:20px 0 100px}
+.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.dg{border:1px solid var(--linha);border-radius:22px;padding:26px;background:#fff}
+.dg .ic{width:46px;height:46px;border-radius:14px;background:var(--amarelo-s);color:var(--escuro);display:grid;place-items:center;margin-bottom:18px}
+.dg h3{font-family:var(--display);font-weight:500;font-size:1.1rem;color:var(--escuro);margin-bottom:6px}
+.dg p{font-size:.9rem;color:var(--suave)}
+@media(max-width:900px){.dgrid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.dgrid{grid-template-columns:1fr}}
+/* rotina */
+.rot{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px;counter-reset:r}
+.rt{border-top:2px solid var(--amarelo);padding-top:18px}
+.rt b{font-family:var(--display);font-size:1.5rem;font-weight:500;color:var(--escuro);font-variant-numeric:tabular-nums}
+.rt h4{font-size:.95rem;margin:6px 0 4px;color:var(--escuro)}
+.rt p{font-size:.86rem;color:var(--suave)}
+@media(max-width:800px){.rot{grid-template-columns:1fr 1fr}}
+/* faq */
+.faq{padding:100px 0}
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+details{border-bottom:1px solid var(--linha);padding:20px 0}
+summary{cursor:pointer;font-family:var(--display);font-weight:500;font-size:1.08rem;color:var(--escuro);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--verde)}
+details[open] summary::after{content:"−"}
+details p{color:var(--suave);margin-top:10px;font-size:.94rem}
+@media(max-width:860px){.faq .wrap{grid-template-columns:1fr}}
+
+/* contato */
+.cta{border-radius:28px;margin:0 14px;background:var(--escuro);color:#fff;padding:70px 0;position:relative;overflow:hidden}
+.cta .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.cta h2{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.15;text-wrap:balance}
+.cta h2 b{color:var(--amarelo);font-weight:500}
+.cta p{color:#cfe0d3;margin-top:14px}
+form{background:#fff;color:var(--texto);border-radius:22px;padding:28px}
+label{display:block;font-size:.76rem;font-weight:600;margin:12px 0 5px}
+input,select{width:100%;padding:13px 15px;border-radius:12px;border:1.5px solid var(--linha);font:inherit;background:#fcfcfa}
+input:focus,select:focus{outline:none;border-color:var(--verde);box-shadow:0 0 0 4px rgba(47,143,31,.15)}
+form button{margin-top:20px;border:0;background:none;cursor:pointer;font-family:inherit;padding:0}
+.ok{display:none;margin-top:14px;padding:12px;border-radius:12px;background:#e8f5e1;font-weight:600;text-align:center;font-size:.9rem}
+@media(max-width:860px){.cta .wrap{grid-template-columns:1fr}}
+footer{padding:40px 0;text-align:center;color:var(--suave);font-size:.82rem}
+footer .logo{display:inline-flex;margin-bottom:10px;border:1px solid var(--linha)}
+.zap{position:fixed;right:20px;bottom:20px;z-index:60;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 26px -6px rgba(0,0,0,.4)}
+.rev{opacity:1;transform:none;transition:opacity .8s,transform .8s}
+.js .rev:not(.on){opacity:0;transform:translateY(24px)}
+@media(prefers-reduced-motion:reduce){.js .rev:not(.on){opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="moldura">
+<header class="hero">
+  <img src="img/hero.jpg" alt="Colégio Liderança COC (imagem ilustrativa)" onerror="this.remove()">
+  <div class="nav">
+    <a class="logo" href="#"><img src="img/logo.png" alt="Colégio Liderança | COC"></a>
+    <ul><li><a href="#proposta">Proposta</a></li><li><a href="#segmentos">Segmentos</a></li><li><a href="#estrutura">Estrutura</a></li><li><a href="#historia">Nossa história</a></li><li><a href="#duvidas">Dúvidas</a></li><li><a href="#contato">Contato</a></li></ul>
+    <a class="ct" href="#contato">Pré-matrícula</a>
+  </div>
+  <div class="txt">
+    <span class="loc"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Em breve em Barra Velha</span>
+    <h1>Educação que constrói <b>novos futuros</b></h1>
+    <p>Mais de quatro décadas de experiência unidas à inovação de uma proposta educacional pensada para o futuro.</p>
+    <a class="btn" href="#contato"><span>Quero conhecer</span><i><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+  </div>
+  <div class="abas">
+    <div>Trajetória<b>+40 anos educando</b></div>
+    <div>Grupo educacional<b>Bandeira COC</b></div>
+    <div>Estrutura<b>6 espaços de aprendizagem</b></div>
+  </div>
+</header>
+</div>
+
+<section id="proposta"><div class="wrap tres">
+  <a class="cd rev" href="#historia">
+    <div class="topo"><span class="chip">Quem somos</span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+    <h3>Um novo nome com a experiência de quem educa há mais de quatro décadas</h3>
+    <div class="im"><img src="img/alunos.jpg" alt="Alunos do colégio (imagem ilustrativa)" loading="lazy" onerror="this.remove()"></div>
+  </a>
+  <a class="cd am rev" href="#estrutura">
+    <div class="im" style="position:relative"><img src="img/maker.jpg" alt="Sala maker (imagem ilustrativa)" loading="lazy" onerror="this.remove()">
+      </div>
+    <div class="base"><span class="chip">Inovação</span>
+      <div class="row"><h3>Sala Maker, tecnologia e espaços que despertam talentos</h3><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+    </div>
+  </a>
+  <a class="cd rev" href="#contato">
+    <div class="topo"><span class="chip">Famílias</span><span class="seta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
+    <h3>Confiança e acolhimento em cada etapa da formação dos nossos alunos</h3>
+    <div class="im"><img src="img/biblioteca.jpg" alt="Biblioteca (imagem ilustrativa)" loading="lazy" onerror="this.remove()"></div>
+  </a>
+</div></section>
+
+<section id="estrutura" class="estr"><div class="wrap">
+  <div class="centro rev"><span class="chip">Estrutura</span><h2>Cada espaço pensado para<br>experiências e descobertas</h2><p>Uma estrutura que une educação, inovação, acolhimento e desenvolvimento.</p></div>
+  <div class="quatro">
+    <article class="sv rev"><img src="img/hero.jpg" alt="Estacionamento" loading="lazy" onerror="this.remove()"><span class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M10 16V8h3a2.5 2.5 0 0 1 0 5h-3"/></svg></span><div><h3>Estacionamento</h3><p>Para maior comodidade das famílias.</p></div></article>
+    <article class="sv rev"><img src="img/quadra.jpg" alt="Quadra de esportes" loading="lazy" onerror="this.remove()"><span class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 5h-5L8 10z"/><path d="M12 3v4M16 10l4-1M14.5 15l2 4M9.5 15l-2 4M8 10 4 9"/></svg></span><div><h3>Quadra de esportes</h3><p>Para incentivar o movimento e a integração.</p></div></article>
+    <article class="sv rev"><img src="img/parque.jpg" alt="Parque e mini cidade" loading="lazy" onerror="this.remove()"><span class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V11l4-3 4 3v10"/><path d="M13 21v-6h6v6"/><path d="M8 14h2"/></svg></span><div><h3>Parque e Mini Cidade</h3><p>Para explorar, brincar e aprender.</p></div></article>
+    <article class="sv rev"><img src="img/maker.jpg" alt="Sala maker" loading="lazy" onerror="this.remove()"><span class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></span><div><h3>Sala Maker</h3><p>Para estimular a criatividade e a inovação.</p></div></article>
+    <article class="sv rev"><img src="img/info.jpg" alt="Laboratório de informática" loading="lazy" onerror="this.remove()"><span class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></span><div><h3>Laboratório de Informática</h3><p>Para conectar conhecimento e tecnologia.</p></div></article>
+    <article class="sv rev"><img src="img/biblioteca.jpg" alt="Biblioteca" loading="lazy" onerror="this.remove()"><span class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h5v17H6a2 2 0 0 0-2 2z"/><path d="M20 5a2 2 0 0 0-2-2h-5v17h5a2 2 0 0 1 2 2z"/></svg></span><div><h3>Biblioteca</h3><p>Para despertar a imaginação e o prazer pela leitura.</p></div></article>
+  </div>
+  <p class="nota">E isso é só o começo. Imagens ilustrativas geradas por inteligência artificial.</p>
+</div></section>
+
+
+<section class="seg" id="segmentos"><div class="wrap">
+  <div class="lado rev"><span class="chip">Segmentos</span><h2>Da primeira descoberta ao vestibular</h2>
+  <p>No Colégio Liderança COC, cada etapa tem uma proposta pensada para a idade e o momento do aluno. Ao longo do caminho, a mesma equipe que conhece seu filho pelo nome acompanha cada conquista.</p>
+  <p>Vagas limitadas por turma para garantir atenção individual.</p>
+  <a class="btn" href="#contato"><span>Reservar vaga</span><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a></div>
+  <div class="pilha"><article class="st"><div class="tx"><span class="idade">2 a 5 anos</span><h3>Educação Infantil</h3><p>Os primeiros anos são de descoberta. Aqui a criança aprende brincando, com rotina acolhedora, turmas reduzidas e muito contato com a natureza no parque e na Mini Cidade.</p><ul><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Turmas com no máximo 18 crianças</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Musicalização e psicomotricidade</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Inglês desde os 2 anos</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Período integral opcional</span></li></ul></div><div class="ft"><img src="img/parque.jpg" alt="Educação Infantil (imagem ilustrativa)" loading="lazy" onerror="this.remove()"></div></article><article class="st"><div class="tx"><span class="idade">1º ao 5º ano</span><h3>Ensino Fundamental I</h3><p>Alfabetização sólida e desenvolvimento do raciocínio lógico com o material didático COC, aliado a projetos na Biblioteca e na Sala Maker.</p><ul><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Material didático COC</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Projeto de leitura com a Biblioteca</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Robótica e cultura maker</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Acompanhamento individual de aprendizagem</span></li></ul></div><div class="ft"><img src="img/biblioteca.jpg" alt="Ensino Fundamental I (imagem ilustrativa)" loading="lazy" onerror="this.remove()"></div></article><article class="st"><div class="tx"><span class="idade">6º ao 9º ano</span><h3>Ensino Fundamental II</h3><p>Autonomia, pensamento crítico e tecnologia. O aluno aprende a pesquisar, argumentar e trabalhar em equipe, com professores especialistas em cada área.</p><ul><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Professores especialistas por disciplina</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Laboratório de Informática e programação</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Esportes e campeonatos internos</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Orientação de estudos e projeto de vida</span></li></ul></div><div class="ft"><img src="img/info.jpg" alt="Ensino Fundamental II (imagem ilustrativa)" loading="lazy" onerror="this.remove()"></div></article><article class="st"><div class="tx"><span class="idade">1ª à 3ª série</span><h3>Ensino Médio</h3><p>Preparação de alto desempenho para o ENEM e os vestibulares, com a metodologia COC e acompanhamento próximo das metas de cada estudante.</p><ul><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Simulados no padrão ENEM</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Plantões de dúvidas</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Orientação vocacional</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Itinerários formativos</span></li></ul></div><div class="ft"><img src="img/alunos.jpg" alt="Ensino Médio (imagem ilustrativa)" loading="lazy" onerror="this.remove()"></div></article></div>
+</div></section>
+
+<section class="dif"><div class="wrap">
+  <div class="rev" style="max-width:640px"><span class="chip">Diferenciais</span><h2>Por que escolher o Colégio Liderança COC</h2><p style="color:var(--suave)">Tradição de quem educa há mais de 40 anos, com a força de uma rede nacional de ensino.</p></div>
+  <div class="dgrid"><div class="dg rev"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h5v17H6a2 2 0 0 0-2 2z"/><path d="M20 5a2 2 0 0 0-2-2h-5v17h5a2 2 0 0 1 2 2z"/></svg></span><h3>Sistema de Ensino COC</h3><p>Material didático e plataforma digital de um dos grupos educacionais mais tradicionais do país, com mais de 60 anos de história.</p></div><div class="dg rev"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span><h3>Inglês todos os dias</h3><p>Programa bilíngue progressivo, da Educação Infantil ao Ensino Médio, com aulas práticas e imersivas.</p></div><div class="dg rev"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Período integral</h3><p>Contraturno com almoço, acompanhamento de tarefas, esportes, artes e oficinas maker.</p></div><div class="dg rev"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 16l4-5 3 3 5-7"/></svg></span><h3>Acompanhamento próximo</h3><p>Avaliações contínuas e reuniões periódicas para as famílias acompanharem cada passo do aluno.</p></div><div class="dg rev"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><h3>Segurança</h3><p>Portaria com controle de acesso, câmeras e estacionamento interno para embarque e desembarque.</p></div><div class="dg rev"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-8-4.6-8-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8 2.8C20 15.4 12 20 12 20z"/></svg></span><h3>Formação humana</h3><p>Projetos de convivência, empatia e cidadania integrados ao currículo, em parceria com as famílias.</p></div></div>
+  <div class="rot rev">
+    <div class="rt"><b>7h15</b><h4>Acolhida</h4><p>Entrada tranquila com professores recebendo os alunos no pátio.</p></div>
+    <div class="rt"><b>9h30</b><h4>Mão na massa</h4><p>Projetos na Sala Maker, no laboratório ou na Biblioteca.</p></div>
+    <div class="rt"><b>12h00</b><h4>Almoço integral</h4><p>Cardápio balanceado, acompanhado por nutricionista.</p></div>
+    <div class="rt"><b>14h00</b><h4>Contraturno</h4><p>Esportes na quadra, inglês, artes e reforço de estudos.</p></div>
+  </div>
+</div></section>
+<section id="historia"><div class="wrap hist">
+  <div class="rev">
+    <span class="chip">Nossa história</span>
+    <h2>Não começamos do zero. Carregamos a experiência de muitas gerações.</h2>
+    <p>O que existe por trás de uma escola que está prestes a abrir suas portas? No nosso caso, uma trajetória construída ao longo de mais de quatro décadas, marcada por dedicação, experiência, desafios superados e compromisso com a educação.</p>
+    <p>O Colégio Liderança COC chega a Barra Velha com um novo nome, uma nova identidade e um grande propósito.</p>
+    <p class="cit">Uma escola se constrói com pessoas, princípios, planejamento e a capacidade de transformar palavras em ações.</p>
+    <div class="nums"><div><b>+40</b><small>anos de história</small></div><div><b>COC</b><small>grupo educacional</small></div></div>
+  </div>
+  <div class="foto rev"><img src="img/alunos.jpg" alt="Alunos (imagem ilustrativa)" loading="lazy" onerror="this.remove()"></div>
+</div></section>
+
+
+<section class="faq" id="duvidas"><div class="wrap">
+  <div class="rev"><span class="chip">Dúvidas</span><h2>Perguntas frequentes das famílias</h2><p style="color:var(--suave)">Não encontrou o que procurava? Fale com a nossa equipe pelo formulário.</p></div>
+  <div class="rev">
+    <details open><summary>Quando o colégio começa a funcionar?</summary><p>As aulas começam no ano letivo de 2027. As pré-matrículas abrem antes da inauguração, e as famílias cadastradas recebem as datas em primeira mão.</p></details>
+    <details><summary>Quais séries vão ser oferecidas?</summary><p>Educação Infantil (a partir dos 2 anos), Ensino Fundamental I e II e Ensino Médio.</p></details>
+    <details><summary>O colégio tem período integral?</summary><p>Sim. O período integral é opcional e inclui almoço, acompanhamento de tarefas, esportes, inglês e oficinas.</p></details>
+    <details><summary>O que é o Sistema de Ensino COC?</summary><p>É o material didático e a plataforma digital do grupo COC, usados em escolas de todo o Brasil, com conteúdo atualizado e foco em resultados.</p></details>
+    <details><summary>Como faço para conhecer a escola?</summary><p>Deixe seus dados no formulário. Vamos agendar uma visita assim que a estrutura estiver pronta para receber as famílias.</p></details>
+  </div>
+</div></section>
+<section id="contato" class="cta"><div class="wrap">
+  <div><span class="chip">Pré-matrícula</span><h2 style="margin-top:16px">Barra Velha, nossa história vai ganhar um <b>novo endereço</b></h2><p>Deixe seus dados e receba em primeira mão as novidades sobre matrículas no Colégio Liderança COC.</p></div>
+  <form id="form" novalidate>
+    <label for="nome">Nome do responsável</label><input id="nome" required placeholder="Seu nome completo">
+    <label for="tel">WhatsApp</label><input id="tel" type="tel" required placeholder="(47) 90000-0000">
+    <label for="serie">Série de interesse</label>
+    <select id="serie"><option>Educação Infantil</option><option>Ensino Fundamental I</option><option>Ensino Fundamental II</option><option>Ensino Médio</option></select>
+    <button class="btn" type="submit"><span>Quero receber informações</span><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></i></button>
+    <div class="ok" id="ok">Obrigado! Em breve entraremos em contato.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><a class="logo" href="#"><img src="img/logo.png" alt="Colégio Liderança | COC" style="height:36px"></a><p>Colégio Liderança COC · Barra Velha – SC · Educação que constrói novos futuros</p></div></footer>
+<a class="zap" id="zap" href="#contato" aria-label="WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.4-4A8 8 0 1 1 9 19.4z"/></svg></a>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+const WHATS=''; // número da escola: 55DDDNUMERO
+if(WHATS)document.getElementById('zap').href='https://wa.me/'+WHATS;
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();const n=document.getElementById('nome'),t=document.getElementById('tel');if(!n.value.trim()||!t.value.trim()){n.focus();return}
+document.getElementById('ok').style.display='block';e.target.reset()});
+</script>
+</body>
+</html>
