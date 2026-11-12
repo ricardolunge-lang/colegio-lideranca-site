@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><title>Briefing Colégio Liderança</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: coluna única de formulário, cabeçalho com progresso fixo, seções numeradas por tema */
+:root{
+  --bg:#f5f6f0; --card:#ffffff; --ink:#16241b; --muted:#5b6b60; --line:#d9dfd2;
+  --green:#1f5d3a; --green-ink:#ffffff; --yellow:#f2b705; --ok:#1f7a45; --warn:#9a6a00; --field:#fbfcf8;
+  --f-head:'Bricolage Grotesque',Georgia,serif; --f-body:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1913; --card:#16241b; --ink:#e9f0e8; --muted:#9db0a2; --line:#2a3d30;
+  --green:#4fb67c; --green-ink:#07140c; --yellow:#f2c230; --ok:#5fcf8c; --warn:#f2c230; --field:#102016; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1913; --card:#16241b; --ink:#e9f0e8; --muted:#9db0a2; --line:#2a3d30;
+  --green:#4fb67c; --green-ink:#07140c; --yellow:#f2c230; --ok:#5fcf8c; --warn:#f2c230; --field:#102016; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55;
+  padding-block:0 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:720px;margin:0 auto}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:12px 0 10px;border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.bar{display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap}
+.brand{font-family:var(--f-head);font-weight:700;font-size:15px;letter-spacing:.01em}
+.status{font-size:13px;color:var(--muted)}
+.status.ok{color:var(--ok)} .status.warn{color:var(--warn)}
+.track{height:6px;background:var(--line);border-radius:99px;margin-top:10px;overflow:hidden}
+.fill{height:100%;width:0;background:var(--green);transition:width .3s}
+.hero{padding:36px 0 8px}
+.hero h1{font-family:var(--f-head);font-size:clamp(28px,6vw,40px);line-height:1.1;margin:0 0 14px;text-wrap:balance}
+.hero p{margin:0 0 10px;color:var(--muted);max-width:60ch}
+.hero .tag{display:inline-block;background:var(--yellow);color:#2a2100;font-weight:600;font-size:13px;padding:4px 10px;border-radius:6px;margin-bottom:14px}
+section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 20px;margin-top:20px}
+section h2{font-family:var(--f-head);font-size:21px;margin:0 0 4px}
+section .intro{color:var(--muted);font-size:14px;margin:0 0 16px}
+.q{margin-top:20px}
+.q label,.q .lab{display:block;font-weight:600;font-size:15px;margin-bottom:4px}
+.hint{font-weight:400;color:var(--muted);font-size:13px;display:block}
+input[type=text],textarea{width:100%;font:inherit;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+textarea{min-height:84px;resize:vertical}
+input:focus-visible,textarea:focus-visible,button:focus-visible,.opt input:focus-visible+span{outline:3px solid var(--yellow);outline-offset:1px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.opt span{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:99px;background:var(--field);font-size:14px}
+.opt input:checked+span{background:var(--green);color:var(--green-ink);border-color:var(--green);font-weight:600}
+.actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:24px}
+button{font:inherit;font-weight:600;cursor:pointer;border-radius:8px;padding:11px 18px;border:1px solid var(--green);background:var(--green);color:var(--green-ink)}
+button.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+.done{display:none;background:var(--card);border:2px solid var(--green);border-radius:12px;padding:20px;margin-top:20px}
+.done.show{display:block}
+@media (prefers-reduced-motion:reduce){.fill{transition:none}}
+</style></head><body>
+
+<div class="wrap">
+<header class="top">
+  <div class="bar"><span class="brand">Colégio Liderança COC</span><span id="status" class="status">Carregando…</span></div>
+  <div class="track"><div class="fill" id="fill"></div></div>
+</header>
+
+<div class="hero">
+  <span class="tag">Briefing de marketing 2027</span>
+  <h1>Antes de divulgar o colégio, precisamos conhecer o projeto</h1>
+  <p>Responda com o que souber. Pode pular o que ainda não está definido, e voltar depois. Suas respostas são salvas automaticamente neste link.</p>
+  <p>Leva cerca de 15 minutos. Isso evita divulgar informações erradas e deixa a campanha pronta para entrar no ar.</p>
+</div>
+
+<form id="form" onsubmit="return false"></form>
+
+<div class="actions">
+  <button id="finish" type="button">Concluir e avisar</button>
+  <button id="copy" type="button" class="ghost">Copiar respostas</button>
+</div>
+<p class="note">Se algo não salvar, use "Copiar respostas" e envie por WhatsApp. Suas respostas ficam guardadas só para a equipe de marketing.</p>
+<div class="done" id="done"><strong>Obrigado!</strong> Suas respostas foram registradas. Em breve entraremos em contato para os próximos passos.</div>
+</div>
+
+<script>
+const SECTIONS=[
+{t:"Objetivo e vagas",i:"Quanto a escola precisa captar e para quais séries.",qs:[
+ ["vagas_meta","Quantas vagas quer preencher em 2027?","t"],
+ ["vagas_minimo","Qual o mínimo de alunos para as turmas abrirem?","t"],
+ ["series","Quais séries/etapas serão oferecidas?","t"],
+ ["alunos_turma","Quantos alunos por turma? (a página de vendas diz 18, isso é real?)","t"],
+ ["lista_espera","Já existem famílias interessadas ou pré-matriculadas?","l","Quantas, e como chegaram até você."],
+ ["prazo_vagas","Até quando precisa fechar as turmas?","t"]]},
+{t:"Valores e condições",i:"Usaremos isso só depois que você confirmar.",qs:[
+ ["mensalidade","Mensalidade por série","l"],
+ ["matricula","Taxa de matrícula, material didático e uniforme","l"],
+ ["fundador","Haverá benefício para família fundadora?","l","Qual, e até quando vale."],
+ ["bolsas","Bolsas, desconto para irmãos ou indicação","l"],
+ ["reserva","Como funciona a reserva de vaga (sinal, reembolso)?","l"],
+ ["pagamento","Formas de pagamento","t"]]},
+{t:"Obra e datas",i:"A reforma será parte da campanha.",qs:[
+ ["obra_data","Data prevista de entrega da obra","t","Se houver margem de atraso, informe."],
+ ["aulas_data","Data de início das aulas","t"],
+ ["obra_visita","Podemos fotografar e filmar a obra? Pais podem visitar?","yn"],
+ ["obra_areas","Quais áreas são seguras para visita?","l"],
+ ["renders","Existem projeto, renders ou plantas para divulgar?","yn"],
+ ["inauguracao","Haverá evento de inauguração?","l"]]},
+{t:"A escola e seus diferenciais",i:"O que faz as famílias escolherem vocês.",qs:[
+ ["coc","Qual a relação com a marca COC e posso usar logo e identidade?","l"],
+ ["diferencial","Principais diferenciais da escola","l"],
+ ["rotina","Horários, rotina, período integral e atividades extras","l"],
+ ["equipe","Direção, coordenação e professores: já estão definidos?","l"],
+ ["depoimentos","A equipe pode aparecer em vídeos e fotos?","yn"]]},
+{t:"Atendimento",i:"O lead esfria rápido: precisamos saber quem responde.",qs:[
+ ["whatsapp","Número de WhatsApp oficial da escola","t"],
+ ["atendente","Quem vai atender as famílias e em qual horário?","l"],
+ ["contatos","Telefone, e-mail e endereço oficiais","l"],
+ ["visitas","Quem recebe as famílias nas visitas?","t"],
+ ["materiais","Já existe folder, tabela de preços ou apresentação?","yn"]]},
+{t:"Público e concorrência",i:"",qs:[
+ ["perfil","Perfil de família que quer atrair","l"],
+ ["cidades","Cidades e bairros prioritários","t"],
+ ["concorrentes","Principais escolas concorrentes na região","l"],
+ ["divulgou","Já fez alguma divulgação antes? O que funcionou?","l"]]},
+{t:"Redes sociais e acessos",i:"As contas continuam sempre em nome da escola.",qs:[
+ ["instagram","Instagram, Facebook e Google Meu Negócio já existem? Qual o @?","l"],
+ ["anuncios","Já anunciou no Meta ou Google antes?","yn"],
+ ["acessos","Aceita dar acesso às contas para nossa equipe administrar?","yn"],
+ ["dominio","A página de vendas ficará em qual endereço (domínio)?","t"]]},
+{t:"Verba e contratação",i:"",qs:[
+ ["verba","Verba total para marketing até fevereiro","t"],
+ ["cartao","Aceita pagar a verba de anúncios direto no cartão da escola?","yn"],
+ ["impressos","Verba para impressos, brindes e eventos","t"],
+ ["bonus","Tem interesse em bônus por matrícula?","yn"],
+ ["decisor","Quem decide e aprova (só você ou sócios/direção)?","t"],
+ ["resposta_prazo","Quando consegue dar uma resposta?","t"]]},
+{t:"Expectativas",i:"",qs:[
+ ["sucesso","O que seria um bom resultado para você? Com que números?","l"],
+ ["aprovacao","Prazo para aprovar posts e anúncios","t"],
+ ["evitar","Algo que não pode ser dito ou mostrado nas campanhas?","l"],
+ ["relatorios","Como prefere receber relatórios (WhatsApp, reunião, PDF)?","t"],
+ ["extra","Algo mais que devemos saber?","l"]]}
+];
+const IDS=[];SECTIONS.forEach(s=>s.qs.forEach(q=>IDS.push(q[0])));
+const form=document.getElementById('form'),statusEl=document.getElementById('status'),fill=document.getElementById('fill');
+const state={};let ref=null,timers={},dirty=new Set();
+function setStatus(t,c){statusEl.textContent=t;statusEl.className='status '+(c||'')}
+function el(tag,attrs,kids){const e=document.createElement(tag);for(const k in attrs||{})e.setAttribute(k,attrs[k]);(kids||[]).forEach(x=>e.append(x));return e}
+SECTIONS.forEach((s,si)=>{
+  const sec=el('section');
+  sec.append(el('h2',{},[s.t]));
+  if(s.i)sec.append(el('p',{class:'intro'},[s.i]));
+  s.qs.forEach(([id,label,type,hint])=>{
+    const q=el('div',{class:'q'});
+    const lab=el(type==='yn'?'div':'label',type==='yn'?{class:'lab'}:{for:'f_'+id},[label]);
+    if(hint)lab.append(el('span',{class:'hint'},[hint]));
+    q.append(lab);
+    if(type==='yn'){
+      const box=el('div',{class:'opts',role:'radiogroup','aria-label':label});
+      ['Sim','Não','Ainda não definido'].forEach((o,k)=>{
+        const inp=el('input',{type:'radio',name:'f_'+id,id:'f_'+id+'_'+k,value:o});
+        inp.addEventListener('change',()=>change(id,o));
+        box.append(el('label',{class:'opt'},[inp,el('span',{},[o])]));
+      });
+      q.append(box);
+    }else{
+      const inp=type==='l'?el('textarea',{id:'f_'+id}):el('input',{type:'text',id:'f_'+id,autocomplete:'off'});
+      inp.addEventListener('input',()=>change(id,inp.value));
+      q.append(inp);
+    }
+    sec.append(q);
+  });
+  form.append(sec);
+});
+function render(id){
+  const v=state[id]||'';
+  const t=document.getElementById('f_'+id);
+  if(t){ if(document.activeElement!==t&&t.value!==v)t.value=v; return }
+  document.querySelectorAll('input[name="f_'+id+'"]').forEach(r=>{r.checked=(r.value===v)});
+}
+function progress(){
+  const n=IDS.filter(id=>(state[id]||'').trim()).length;
+  fill.style.width=Math.round(100*n/IDS.length)+'%';
+  return n;
+}
+function loadLocal(){try{const j=JSON.parse(localStorage.getItem('briefing-lideranca')||'{}');Object.assign(state,j)}catch(e){}}
+function saveLocal(){try{localStorage.setItem('briefing-lideranca',JSON.stringify(state))}catch(e){}}
+function change(id,v){
+  state[id]=v;dirty.add(id);saveLocal();progress();
+  clearTimeout(timers[id]);timers[id]=setTimeout(push,600);
+  setStatus('Salvando…');
+}
+let inflight=false,again=false;
+async function push(){
+  if(inflight){again=true;return}
+  inflight=true;
+  const snap=Object.assign({},state);
+  try{
+    const r=await fetch('/api/respostas',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({campos:snap})});
+    if(!r.ok)throw new Error('http '+r.status);
+    dirty.forEach(k=>{if(state[k]===snap[k])dirty.delete(k)});
+    setStatus(dirty.size?'Salvando…':'Respostas salvas','ok');
+  }catch(e){setStatus('Sem conexão. Suas respostas estão neste aparelho e serão enviadas de novo.','warn');setTimeout(push,8000)}
+  inflight=false;
+  if(again){again=false;push()}
+}
+function textOut(){
+  let out='Briefing Colégio Liderança COC\n';
+  SECTIONS.forEach(s=>{out+='\n## '+s.t+'\n';s.qs.forEach(([id,label])=>{out+='- '+label+': '+((state[id]||'').trim()||'(sem resposta)')+'\n'})});
+  return out;
+}
+document.getElementById('copy').addEventListener('click',async()=>{
+  const t=textOut();
+  try{await navigator.clipboard.writeText(t);setStatus('Respostas copiadas','ok')}
+  catch(e){const ta=el('textarea');ta.value=t;document.body.append(ta);ta.select();try{document.execCommand('copy');setStatus('Respostas copiadas','ok')}catch(_){setStatus('Não foi possível copiar','warn')}ta.remove()}
+});
+document.getElementById('finish').addEventListener('click',async()=>{
+  state.concluido='sim';dirty.add('concluido');
+  await push();
+  document.getElementById('done').classList.add('show');
+  document.getElementById('done').scrollIntoView({behavior:'smooth',block:'center'});
+});
+loadLocal();IDS.forEach(render);progress();
+if(Object.keys(state).length){setStatus('Rascunho recuperado');dirty.add('_');push()}else setStatus('Pronto para responder');
+</script>
+</body></html>
