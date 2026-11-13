@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposta Colégio Liderança COC · Braza Labz</title>
+<meta name="description" content="Estratégia de captação e investimento para as matrículas 2027 do Colégio Liderança COC, Barra Velha.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#060a1a; --bg2:#0a1030; --card:#0b1131; --card2:#111a45;
+  --line:rgba(155,155,255,.16); --line2:rgba(155,155,255,.28);
+  --blue:#2433ff; --blue2:#3a48ff; --lilac:#9b9bff;
+  --text:#f3f1ea; --muted:#a3a6bf; --dim:#6f7392; --green:#2fd27a;
+  --r:28px; --r2:20px;
+  --display:"Archivo", "Inter Tight", system-ui, sans-serif;
+  --sans:"Inter Tight", system-ui, -apple-system, Segoe UI, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+@media (max-width:640px){.wrap{padding:0 18px}body{font-size:16px}}
+
+/* Glow */
+.glow{position:absolute;pointer-events:none;border-radius:50%;filter:blur(90px);opacity:.55;z-index:0}
+
+/* Nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(6,10,26,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(155,155,255,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--sans);font-weight:800;font-size:21px;letter-spacing:-.02em}
+.logo i{width:18px;height:18px;border-radius:5px;background:var(--text);display:block}
+.nav-links{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+.nav-links a:hover{color:var(--text)}
+.mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.22em;font-size:12.5px}
+.nav-meta{color:var(--dim)}
+@media (max-width:960px){.nav-links{display:none}}
+
+/* Type */
+.label{font-family:var(--mono);text-transform:uppercase;letter-spacing:.24em;font-size:12.5px;color:var(--lilac);display:flex;align-items:center;gap:14px}
+.label .n{color:var(--dim)}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.035em;line-height:.98;font-stretch:115%}
+h1{font-size:clamp(46px,8.4vw,118px)}
+h2{font-size:clamp(36px,5.6vw,76px);margin-top:18px}
+h3{font-size:clamp(21px,2vw,26px);letter-spacing:-.02em;line-height:1.12;font-stretch:105%}
+em.hl{font-style:italic;color:var(--lilac)}
+.hl{color:var(--lilac)}
+.lead{color:var(--muted);font-size:clamp(17px,1.5vw,20px);max-width:620px}
+.muted{color:var(--muted)}
+.dia{color:var(--lilac);font-size:.85em}
+strong{font-weight:700;color:var(--text)}
+
+/* Buttons */
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:10px;height:58px;padding:0 30px;border-radius:999px;font-weight:700;font-size:16px;transition:transform .2s,background .2s,box-shadow .2s}
+.btn-blue{background:var(--blue);box-shadow:0 10px 40px -10px rgba(36,51,255,.8)}
+.btn-blue:hover{background:var(--blue2);transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line2);background:rgba(11,17,49,.6)}
+.btn-ghost:hover{border-color:var(--lilac)}
+.btn svg{width:16px;height:16px}
+
+/* Pill */
+.pill{display:inline-flex;align-items:center;gap:10px;padding:9px 18px;border-radius:999px;border:1px solid var(--line2);background:rgba(11,17,49,.7);font-size:14.5px;color:var(--text)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(47,210,122,.18)}
+.tag{display:inline-flex;align-items:center;padding:7px 15px;border-radius:999px;background:var(--blue);font-weight:700;font-size:13.5px;box-shadow:0 6px 24px -6px rgba(36,51,255,.9);white-space:nowrap}
+.tag.ghost{background:transparent;border:1px solid var(--line2);box-shadow:none;color:var(--lilac)}
+
+/* Hero */
+.hero{position:relative;padding:110px 0 90px;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{margin:28px 0 30px;max-width:1050px}
+.hero .lead{margin-bottom:40px}
+.hero-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:70px;background:var(--line);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden}
+.hero-meta div{background:var(--bg);padding:22px 26px}
+.hero-meta span{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-bottom:6px}
+.hero-meta b{font-weight:600;font-size:17px}
+@media (max-width:760px){.hero{padding:70px 0 60px}.hero-meta{grid-template-columns:1fr;margin-top:50px}}
+
+/* Section */
+section{position:relative;padding:110px 0}
+@media (max-width:640px){section{padding:76px 0}}
+.sec-head{display:grid;grid-template-columns:1.35fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
+.sec-head .lead{justify-self:end}
+@media (max-width:900px){.sec-head{grid-template-columns:1fr;gap:22px}.sec-head .lead{justify-self:start}}
+.divider{border-top:1px solid rgba(155,155,255,.08)}
+
+/* Cards */
+.card{background:linear-gradient(180deg,var(--card) 0%,#080d27 100%);border:1px solid var(--line);border-radius:var(--r);padding:34px;position:relative;overflow:hidden}
+.card-inner{background:radial-gradient(120% 100% at 30% 0%,#1a2366 0%,#0d1440 55%,#0b1131 100%);border:1px solid var(--line);border-radius:var(--r2);padding:26px}
+.grid{display:grid;gap:22px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:980px){.g3{grid-template-columns:1fr}}
+@media (max-width:820px){.g2{grid-template-columns:1fr}}
+@media (max-width:640px){.card{padding:24px;border-radius:22px}.card-inner{padding:20px}}
+
+/* Note */
+.note{display:flex;gap:18px;align-items:flex-start;padding:24px 28px;border-radius:var(--r2);border:1px dashed var(--line2);background:rgba(36,51,255,.06);color:var(--muted);font-size:16px}
+.note .diam{font-size:22px;color:var(--lilac);line-height:1.2}
+
+/* Onde estamos */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+@media (max-width:900px){.split{grid-template-columns:1fr;gap:36px}}
+.split p+p{margin-top:18px}
+.season-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:6px}
+.season-top small{color:var(--muted);font-size:14px}
+.big{font-family:var(--display);font-weight:800;font-stretch:112%;letter-spacing:-.04em;font-size:clamp(40px,5vw,58px);line-height:1;color:#d9d8ef}
+.bars{display:flex;align-items:flex-end;gap:10px;height:170px;margin:26px 0 12px}
+.bars div{flex:1;border-radius:8px 8px 3px 3px;background:rgba(155,155,255,.14)}
+.bars div.on{background:linear-gradient(180deg,#8f93ff,var(--blue))}
+.months{display:flex;gap:10px}
+.months span{flex:1;text-align:center;font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.08em}
+.months span.on{color:var(--lilac)}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.step{padding:28px 24px;border-radius:var(--r2);background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.step .num{font-family:var(--mono);font-size:13px;color:var(--lilac);letter-spacing:.1em}
+.step h3{font-size:20px}
+.step p{color:var(--muted);font-size:15px}
+.step.feature{background:var(--blue);border-color:var(--blue)}
+.step.feature p,.step.feature .num{color:rgba(243,241,234,.85)}
+@media (max-width:1100px){.steps{grid-template-columns:repeat(2,1fr)}.step:last-child{grid-column:1/-1}}
+@media (max-width:600px){.steps{grid-template-columns:1fr}}
+
+/* Timeline */
+.tl{display:flex;flex-direction:column;gap:14px}
+.tl-row{display:grid;grid-template-columns:200px 1fr 1fr;gap:28px;padding:26px 30px;border-radius:var(--r2);border:1px solid var(--line);background:var(--card);align-items:start}
+.tl-row.peak{border-color:rgba(36,51,255,.8);box-shadow:inset 0 0 0 1px rgba(36,51,255,.5),0 20px 60px -30px rgba(36,51,255,.9)}
+.tl-date{font-family:var(--display);font-weight:800;font-stretch:110%;font-size:22px;letter-spacing:-.02em}
+.tl-date small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--lilac);margin-top:8px;font-weight:400}
+.tl-col span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-bottom:6px}
+.tl-col p{font-size:15.5px}
+.tl-col.v p{color:var(--muted)}
+@media (max-width:860px){.tl-row{grid-template-columns:1fr;gap:14px;padding:22px}}
+
+/* Lists */
+.list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:20px}
+.list li{position:relative;padding-left:26px;color:var(--muted);font-size:15.5px}
+.list li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:3px;background:var(--blue);box-shadow:0 0 12px rgba(36,51,255,.9)}
+.list.lilac li::before{background:var(--lilac);box-shadow:none}
+.card-k{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+
+/* Video */
+.video-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:22px}
+@media (max-width:900px){.video-grid{grid-template-columns:1fr}}
+.price-row{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0 4px}
+.price-box{flex:1;min-width:200px;padding:20px 22px;border-radius:18px;border:1px solid var(--line);background:rgba(6,10,26,.45)}
+.price-box span{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--dim);text-transform:uppercase}
+.price-box b{display:block;font-family:var(--display);font-weight:800;font-stretch:112%;font-size:32px;letter-spacing:-.03em;margin-top:6px}
+.price-box.on{background:var(--blue);border-color:var(--blue)}
+.price-box.on span{color:rgba(243,241,234,.8)}
+.mix{display:flex;gap:6px;height:14px;border-radius:999px;overflow:hidden;margin:20px 0 14px}
+.mix div{border-radius:999px}
+.mix-leg{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:14px;color:var(--muted)}
+.mix-leg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:middle}
+
+/* Packages */
+.pk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+@media (max-width:980px){.pk-grid{grid-template-columns:1fr}}
+.pk{display:flex;flex-direction:column;gap:18px}
+.pk .price{font-family:var(--display);font-weight:800;font-stretch:115%;font-size:clamp(40px,4vw,52px);letter-spacing:-.04em;line-height:1}
+.pk .price small{font-family:var(--sans);font-size:16px;font-weight:500;color:var(--muted);letter-spacing:0;margin-left:4px}
+.pk p.why{color:var(--muted);font-size:15.5px}
+.pk.rec{background:radial-gradient(120% 90% at 20% 0%,#3f4cff 0%,var(--blue) 45%,#1a25c9 100%);border-color:transparent;box-shadow:0 30px 90px -30px rgba(36,51,255,.95);transform:translateY(-12px)}
+.pk.rec p.why,.pk.rec .price small{color:rgba(243,241,234,.82)}
+.pk.rec .list li{color:rgba(243,241,234,.92)}
+.pk.rec .list li::before{background:var(--text);box-shadow:none}
+.pk.rec .tag{background:var(--text);color:var(--blue);box-shadow:none}
+@media (max-width:980px){.pk.rec{transform:none}}
+
+/* Tables */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:var(--r2);background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:15.5px;min-width:640px}
+th,td{padding:17px 22px;text-align:left;border-bottom:1px solid rgba(155,155,255,.09);vertical-align:top}
+tr:last-child td{border-bottom:0}
+thead th{font-family:var(--mono);font-weight:500;font-size:11.5px;text-transform:uppercase;letter-spacing:.18em;color:var(--dim);background:rgba(6,10,26,.5)}
+tbody th{font-weight:600;color:var(--text);width:28%}
+td{color:var(--muted)}
+.col-rec{background:rgba(36,51,255,.16)}
+thead th.col-rec{background:var(--blue);color:var(--text)}
+td.col-rec{color:var(--text)}
+tr.total th,tr.total td{color:var(--text);font-weight:800;font-size:17px;background:rgba(155,155,255,.05)}
+tr.total td.col-rec{background:rgba(36,51,255,.32)}
+.yes{color:var(--text)}
+.tbl-cap{margin-top:14px;font-size:14px;color:var(--dim);font-style:italic}
+.scroll-hint{display:none;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--dim);margin-bottom:10px;text-transform:uppercase}
+@media (max-width:700px){.scroll-hint{display:block}th,td{padding:14px 16px}}
+
+/* Invest */
+.inv-head{display:flex;align-items:baseline;gap:16px;margin:0 0 22px;flex-wrap:wrap}
+.inv-head .letter{width:44px;height:44px;border-radius:12px;background:var(--blue);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:22px;flex:none;align-self:center}
+.inv-head h3{font-size:clamp(24px,2.6vw,32px)}
+.inv-head p{color:var(--muted);font-size:15px;flex-basis:100%;padding-left:60px}
+@media (max-width:640px){.inv-head p{padding-left:0}}
+.ads-viz{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.ads-m{padding:18px;border-radius:16px;background:rgba(6,10,26,.45);border:1px solid var(--line)}
+.ads-m span{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--dim);text-transform:uppercase}
+.ads-m b{display:block;font-family:var(--display);font-stretch:110%;font-weight:800;font-size:24px;letter-spacing:-.02em;margin:6px 0 12px}
+.stack{display:flex;height:8px;border-radius:999px;overflow:hidden;gap:3px}
+.stack div:first-child{background:var(--blue2)}
+.stack div:last-child{background:var(--lilac)}
+.ads-m small{display:block;font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.5}
+@media (max-width:820px){.ads-viz{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.ads-m b{font-size:20px;white-space:nowrap}.ads-m span{letter-spacing:.1em}.bonus{grid-template-columns:1fr!important;gap:16px!important}.bonus .tag{justify-self:start}}
+
+/* Metas */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media (max-width:980px){.kpis{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.kpis{grid-template-columns:1fr}}
+.kpi small{display:block;color:var(--muted);font-size:14px;margin-bottom:10px}
+.kpi .big{font-size:clamp(36px,3.8vw,48px)}
+.kpi .sub{margin-top:12px;font-size:13.5px;color:var(--muted)}
+.meter{height:8px;border-radius:999px;background:rgba(155,155,255,.14);margin-top:18px;position:relative;overflow:hidden}
+.meter i{position:absolute;top:0;bottom:0;border-radius:999px;background:linear-gradient(90deg,var(--blue),#8f93ff)}
+.roi{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+@media (max-width:900px){.roi{grid-template-columns:1fr;gap:26px}}
+.roi-viz{display:flex;flex-direction:column;gap:16px}
+.roi-bar span{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:8px;gap:12px}
+.roi-bar span b{color:var(--text);font-weight:700}
+.roi-bar div{height:30px;border-radius:10px;background:rgba(155,155,255,.1);overflow:hidden}
+.roi-bar div i{display:block;height:100%;border-radius:10px}
+
+/* Premissas */
+.prem{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:980px){.prem{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.prem{grid-template-columns:1fr}}
+.prem .card{padding:26px}
+.prem .n{font-family:var(--mono);color:var(--lilac);font-size:13px;letter-spacing:.12em}
+.prem h4{font-size:17.5px;font-weight:600;line-height:1.4;margin:12px 0 16px}
+.prem .chg{font-size:14px;color:var(--muted);padding-top:14px;border-top:1px solid var(--line)}
+.prem .chg b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);font-weight:400;margin-bottom:4px}
+
+/* Conditions */
+.cond{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden}
+.cond div{background:var(--bg);padding:28px}
+.cond span{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--lilac)}
+.cond p{margin-top:10px;color:var(--muted);font-size:15.5px}
+@media (max-width:900px){.cond{grid-template-columns:1fr}}
+
+/* Next steps + CTA */
+.next{list-style:none;counter-reset:n;display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.next li{counter-increment:n;display:grid;grid-template-columns:90px 1fr;gap:20px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-stretch:108%;font-weight:700;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.02em;line-height:1.2}
+.next li::before{content:counter(n,decimal-leading-zero) " /";font-family:var(--mono);font-size:13px;letter-spacing:.14em;color:var(--lilac);font-weight:400}
+@media (max-width:600px){.next li{grid-template-columns:56px 1fr;gap:10px}}
+.cta{position:relative;margin-top:100px;border-radius:36px;padding:clamp(40px,7vw,90px);background:radial-gradient(120% 140% at 0% 100%,#5560ff 0%,var(--blue) 40%,#1a25c9 100%);overflow:hidden}
+.cta h2{margin:22px 0 22px;max-width:900px}
+.cta .label{color:rgba(243,241,234,.8)}
+.cta p{color:rgba(243,241,234,.85);max-width:560px;font-size:18px;margin-bottom:36px}
+.cta .btn-blue{background:var(--text);color:var(--blue);box-shadow:none}
+.cta .btn-ghost{border-color:rgba(243,241,234,.45);background:transparent}
+.cta .hl{color:#c9caff}
+.cta-foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:60px;color:rgba(243,241,234,.7)}
+
+footer{padding:50px 0 60px;color:var(--dim)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media print{nav{position:static}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#topo" class="logo"><i></i>Braza Labz</a>
+    <div class="nav-links">
+      <a href="#estrategia">Estratégia</a>
+      <a href="#cronograma">Cronograma</a>
+      <a href="#videos">Vídeos</a>
+      <a href="#pacotes">Pacotes</a>
+      <a href="#investimento">Investimento</a>
+      <a href="#proximos">Próximos passos</a>
+    </div>
+    <span class="mono nav-meta">Proposta · 2026</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="topo">
+  <div class="glow" style="width:620px;height:620px;background:#2433ff;top:-220px;right:-160px;opacity:.38"></div>
+  <div class="glow" style="width:420px;height:420px;background:#5b5bff;bottom:-200px;left:-140px;opacity:.25"></div>
+  <div class="wrap">
+    <span class="pill rv"><span class="dot"></span>Proposta válida por 7 dias</span>
+    <h1 class="rv">Matrículas 2027 começam <em class="hl">agora.</em></h1>
+    <p class="lead rv">Estratégia de captação e investimento para o Colégio Liderança COC, em Barra Velha. Uma escola em obra, vendida pelo que ela vai ser.</p>
+    <div class="btns rv">
+      <a href="#pacotes" class="btn btn-blue">Ver pacotes <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="#estrategia" class="btn btn-ghost">Ler a estratégia</a>
+    </div>
+    <div class="hero-meta rv">
+      <div><span>Preparada para</span><b>Direção / Proprietário do Colégio Liderança COC</b></div>
+      <div><span>Data</span><b>13 de novembro de 2026</b></div>
+      <div><span>Período</span><b>15/11/2026 a 15/02/2027</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="note rv">
+    <span class="diam">◆</span>
+    <div><strong>Como ler este documento:</strong> não tivemos tempo de alinhar todos os detalhes com a escola, então usamos <strong>premissas</strong> (marcadas com <span class="hl">◆</span>). Elas são o nosso ponto de partida e podem ser ajustadas por vocês sem mudar a estratégia. A lista completa está na <a href="#premissas" class="hl">seção 09</a>.</div>
+  </div>
+</div>
+
+<!-- 01 ONDE ESTAMOS -->
+<section id="onde">
+  <div class="wrap split">
+    <div>
+      <div class="label rv"><span class="n">01 / 11</span>Onde estamos</div>
+      <h2 class="rv">Uma escola que os pais <em class="hl">ainda não podem ver.</em></h2>
+      <p class="lead rv" style="margin-top:28px">O Colégio Liderança vai abrir em 2027, ainda em obra. A maior parte das famílias decide a escola entre <strong>novembro e janeiro</strong>, então cada semana conta. O desafio é fazer os pais confiarem em uma escola que eles ainda não podem ver pronta.</p>
+      <p class="lead rv">A nossa resposta é transformar a obra em vantagem: <strong>mostrar o projeto, a equipe e a evolução da construção</strong> e levar as famílias para uma conversa direta com a escola.</p>
+    </div>
+    <div class="card rv">
+      <div class="card-inner">
+        <div class="season-top">
+          <small>Janela de decisão das famílias</small>
+          <span class="tag">Cada semana conta</span>
+        </div>
+        <div class="big">Nov a Jan</div>
+        <div class="bars" aria-hidden="true">
+          <div style="height:22%"></div><div style="height:30%"></div><div style="height:42%"></div>
+          <div class="on" style="height:78%"></div><div class="on" style="height:96%"></div><div class="on" style="height:88%"></div>
+          <div style="height:50%"></div>
+        </div>
+        <div class="months"><span>AGO</span><span>SET</span><span>OUT</span><span class="on">NOV</span><span class="on">DEZ</span><span class="on">JAN</span><span>FEV</span></div>
+      </div>
+      <p class="mono" style="color:var(--dim);font-size:10.5px;margin-top:16px;text-align:right;letter-spacing:.14em">Ilustrativo</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 ESTRATÉGIA -->
+<section id="estrategia" class="divider">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label rv"><span class="n">02 / 11</span>A estratégia</div>
+        <h2 class="rv">Cinco passos. <span class="hl">Um caminho</span> até a matrícula.</h2>
+      </div>
+      <p class="lead rv">Do primeiro vídeo à conversa com a direção. Cada passo leva a família para o próximo.</p>
+    </div>
+    <div class="steps">
+      <div class="step feature rv"><span class="num">01</span><h3>Mostrar a escola antes de ela existir.</h3><p>Vídeos com a planta e a arquitetura (percurso virtual pelas salas, quadra, biblioteca, áreas externas) e a evolução da obra. O pai e a mãe "entram" na escola pelo celular.</p></div>
+      <div class="step rv"><span class="num">02</span><h3>Atrair as famílias certas.</h3><p>Anúncios no Instagram/Facebook e no Google para pais de Barra Velha e cidades vizinhas.</p></div>
+      <div class="step rv"><span class="num">03</span><h3>Converter pelo WhatsApp.</h3><p>Toda campanha leva a uma conversa rápida (resposta em até 10 minutos no horário comercial) e ao convite para uma visita ou conversa com a direção.</p></div>
+      <div class="step rv"><span class="num">04</span><h3>Fechar com encontro presencial.</h3><p>Visitas guiadas, plantões de matrícula e evento de pré-abertura.</p></div>
+      <div class="step rv"><span class="num">05</span><h3>Criar urgência real.</h3><p>"Família fundadora" e "últimas vagas", <strong>somente com números e condições reais</strong> confirmados pela escola.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 CRONOGRAMA -->
+<section id="cronograma" class="divider">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label rv"><span class="n">03 / 11</span>Cronograma</div>
+        <h2 class="rv">Três meses, <span class="hl">cinco fases.</span></h2>
+      </div>
+      <p class="lead rv">O investimento acompanha o calendário das famílias, com pico entre janeiro e o início das aulas.</p>
+    </div>
+    <div class="tl">
+      <div class="tl-row rv"><div class="tl-date">15 a 30 nov<small>Fase 1</small></div><div class="tl-col"><span>Foco</span><p>Estrutura, rastreamento, primeiras campanhas, lista de fundadores</p></div><div class="tl-col v"><span>Vídeos</span><p>Vídeo principal da escola (planta e arquitetura) em produção</p></div></div>
+      <div class="tl-row rv"><div class="tl-date">1 a 22 dez<small>Fase 2</small></div><div class="tl-col"><span>Foco</span><p>Plantões, visitas, remarketing, pré-matrícula com prazo</p></div><div class="tl-col v"><span>Vídeos</span><p>Vídeo principal no ar + série de Reels + 1ª captação da obra</p></div></div>
+      <div class="tl-row rv"><div class="tl-date">23 dez a 10 jan<small>Fase 3</small></div><div class="tl-col"><span>Foco</span><p>Manutenção enxuta, preparação do lançamento</p></div><div class="tl-col v"><span>Vídeos</span><p>Conteúdo agendado, preparo do vídeo de lançamento</p></div></div>
+      <div class="tl-row peak rv"><div class="tl-date">11 jan a 7 fev<small>Fase 4 · Pico</small></div><div class="tl-col"><span>Foco</span><p>Pico de investimento, "últimas vagas", pré-abertura</p></div><div class="tl-col v"><span>Vídeos</span><p>2ª captação da obra, contagem regressiva</p></div></div>
+      <div class="tl-row rv"><div class="tl-date">1 a 15 fev<small>Fase 5</small></div><div class="tl-col"><span>Foco</span><p>Início das aulas, prova social, vagas remanescentes, relatório final</p></div><div class="tl-col v"><span>Vídeos</span><p>3ª captação (escola pronta / 1º dia)</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 INCLUÍDO -->
+<section id="incluido" class="divider">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label rv"><span class="n">04 / 11</span>O que está incluído</div>
+        <h2 class="rv">Tudo o que a gestão <span class="hl">cobre.</span></h2>
+      </div>
+      <p class="lead rv">Da estrutura inicial às ações de campo. Sem peças soltas.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card rv">
+        <div class="card-k"><span class="label">Implantação</span><span class="tag">Sem custo adicional</span></div>
+        <h3>Primeiras 2 semanas</h3>
+        <ul class="list">
+          <li>Revisão da página de vendas com informações confirmadas pela escola</li>
+          <li>Rastreamento de resultados (Meta Pixel, Google Analytics) e medição de cliques no WhatsApp e formulários</li>
+          <li>Google Meu Negócio (aparecer no Google e no Maps)</li>
+          <li>Funil de acompanhamento das famílias (da primeira conversa à matrícula)</li>
+        </ul>
+      </div>
+      <div class="card rv">
+        <div class="card-k"><span class="label">Recorrente</span><span class="tag ghost">Todo mês</span></div>
+        <h3>Gestão contínua</h3>
+        <ul class="list">
+          <li>Gestão de anúncios no Meta e no Google (criação, testes, remarketing)</li>
+          <li>Instagram: calendário, linha visual e publicações (quantidade conforme o pacote)</li>
+          <li>Relatório em linguagem simples (leads, custo por lead, visitas, pré-matrículas)</li>
+          <li>Reunião de resultados e ajustes</li>
+        </ul>
+      </div>
+      <div class="card rv">
+        <div class="card-k"><span class="label">Presencial</span><span class="tag ghost">Campo</span></div>
+        <h3>Ações de campo</h3>
+        <ul class="list">
+          <li>Plano e arte para visitas guiadas e plantões de matrícula</li>
+          <li>Parcerias locais e pauta para imprensa local</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 VÍDEOS -->
+<section id="videos" class="divider">
+  <div class="glow" style="width:520px;height:520px;background:#2433ff;top:10%;left:-260px;opacity:.22"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="sec-head">
+      <div>
+        <div class="label rv"><span class="n">05 / 11</span>Novo item · Vídeos durante a obra</div>
+        <h2 class="rv">A obra vira <em class="hl">vitrine.</em></h2>
+      </div>
+      <p class="lead rv">Os vídeos são o que permite vender uma escola que ainda não está pronta.</p>
+    </div>
+    <div class="video-grid">
+      <div class="card rv">
+        <p class="muted">São produzidos com <strong>inteligência artificial</strong> a partir da planta baixa e da arquitetura do projeto: percursos virtuais pelas salas, biblioteca, quadra e áreas externas, vídeos curtos para Reels e anúncios, e a evolução da obra ("antes e agora").</p>
+        <div class="price-row">
+          <div class="price-box"><span>Essencial</span><b>R$ 250</b><small class="muted">por vídeo</small></div>
+          <div class="price-box on"><span>Completo e Premium</span><b>Incluídos</b><small style="color:rgba(243,241,234,.85)"><span class="dia">◆</span> até 5 no Completo; até 10 no Premium</small></div>
+        </div>
+        <div class="card-inner" style="margin-top:22px">
+          <div class="card-k" style="margin-bottom:4px"><small class="muted" style="font-size:14px">Exemplo de uso no Completo</small><span class="tag">5 vídeos · sem custo adicional</span></div>
+          <div class="mix" aria-hidden="true"><div style="flex:1;background:var(--text)"></div><div style="flex:2;background:var(--blue2)"></div><div style="flex:2;background:var(--lilac)"></div></div>
+          <div class="mix-leg">
+            <span><i style="background:var(--text)"></i>1 vídeo de apresentação da escola</span>
+            <span><i style="background:var(--blue2)"></i>2 vídeos curtos para Reels e anúncios</span>
+            <span><i style="background:var(--lilac)"></i>2 vídeos da evolução da obra</span>
+          </div>
+          <p class="mono" style="color:var(--dim);font-size:10.5px;margin-top:14px;letter-spacing:.14em"><span class="dia">◆</span> Premissa</p>
+        </div>
+      </div>
+      <div class="grid" style="gap:22px">
+        <div class="card rv">
+          <div class="label">Prazo e apresentação</div>
+          <ul class="list">
+            <li><strong>Vídeo inicial de apresentação da escola entregue em até 5 dias</strong> após o recebimento do material da escola.</li>
+            <li><strong>Vídeos da evolução da obra</strong> ao longo do período, a partir das fotos e vídeos da obra enviados pela escola.</li>
+            <li><strong>Apresentador(a):</strong> uma pessoa conduz os vídeos, apresentando a escola e a obra com base no material fornecido pela escola.</li>
+          </ul>
+        </div>
+        <div class="card rv">
+          <div class="label">Condições</div>
+          <ul class="list lilac">
+            <li><span class="dia">◆</span> A escola/construtora fornece <strong>planta baixa, projeto arquitetônico, fotos e vídeos da obra</strong> (e imagens do modelo 3D, se existirem), com a autorização de uso.</li>
+            <li>Os vídeos mostram o <strong>projeto</strong> e serão identificados como "projeto / imagem ilustrativa", para não gerar expectativa diferente do que será entregue.</li>
+            <li>Inclui 2 rodadas de ajustes por vídeo.</li>
+            <li>Vídeo com crianças/alunos só com autorização escrita dos responsáveis.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 PACOTES -->
+<section id="pacotes" class="divider">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label rv"><span class="n">06 / 11</span>Pacotes de gestão</div>
+        <h2 class="rv">Escolha o <em class="hl">ritmo.</em></h2>
+      </div>
+      <p class="lead rv">Três níveis de acompanhamento. O Completo é o equilíbrio que recomendamos.</p>
+    </div>
+
+    <div class="pk-grid">
+      <div class="card pk rv">
+        <div class="card-k" style="margin:0"><span class="label">Essencial</span></div>
+        <div class="price">R$ 2.500<small>/mês</small></div>
+        <p class="why">Para começar com o básico (anúncios + medição). Indicado se a verba for limitada.</p>
+        <ul class="list">
+          <li>Anúncios Meta + Google</li>
+          <li>Rastreamento e funil de leads</li>
+          <li>Relatório mensal</li>
+          <li>Vídeos com IA a R$ 250 por vídeo</li>
+        </ul>
+      </div>
+      <div class="card pk rec rv">
+        <div class="card-k" style="margin:0"><span class="label" style="color:var(--text)">Completo</span><span class="tag">Recomendado</span></div>
+        <div class="price">R$ 3.900<small>/mês</small></div>
+        <p class="why">O equilíbrio ideal. Anúncios, Instagram, materiais e plano de visitas. É o que recomendamos.</p>
+        <ul class="list">
+          <li>Anúncios Meta + Google</li>
+          <li>Rastreamento e funil de leads</li>
+          <li>Relatório quinzenal</li>
+          <li>Instagram: 12 posts por mês + stories</li>
+          <li>Vídeos com IA incluídos (◆ até 5)</li>
+          <li>Artes de impressos</li>
+          <li>Plano de visitas e plantões</li>
+          <li>Roteiro de abordagem para parcerias e mídia local</li>
+        </ul>
+      </div>
+      <div class="card pk rv">
+        <div class="card-k" style="margin:0"><span class="label">Premium</span></div>
+        <div class="price">R$ 5.500<small>/mês</small></div>
+        <p class="why">Para quem quer acompanhamento próximo e presença forte de conteúdo da obra.</p>
+        <ul class="list">
+          <li>Tudo do Completo, com relatório quinzenal + reunião semanal</li>
+          <li>Instagram: 16 posts por mês + stories + reels</li>
+          <li>Vídeos com IA incluídos (◆ até 10)</li>
+          <li>Artes de impressos com mais variações</li>
+          <li>Visitas e plantões com acompanhamento presencial</li>
+          <li>Abordagem ativa e assessoria de imprensa</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:56px" class="rv">
+      <div class="label" style="margin-bottom:18px">Comparativo completo</div>
+      <p class="scroll-hint">Arraste para o lado →</p>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th></th><th>Essencial</th><th class="col-rec">Completo · recomendado</th><th>Premium</th></tr></thead>
+          <tbody>
+            <tr><th>Mensalidade</th><td>R$ 2.500</td><td class="col-rec"><strong>R$ 3.900</strong></td><td>R$ 5.500</td></tr>
+            <tr><th>Anúncios Meta + Google</th><td class="yes">Sim</td><td class="col-rec">Sim</td><td class="yes">Sim</td></tr>
+            <tr><th>Rastreamento e funil de leads</th><td class="yes">Sim</td><td class="col-rec">Sim</td><td class="yes">Sim</td></tr>
+            <tr><th>Relatório</th><td>Mensal</td><td class="col-rec">Quinzenal</td><td>Quinzenal + reunião semanal</td></tr>
+            <tr><th>Instagram (posts por mês)</th><td>—</td><td class="col-rec">12 + stories</td><td>16 + stories + reels</td></tr>
+            <tr><th>Vídeos com IA</th><td>R$ 250 por vídeo</td><td class="col-rec">Incluídos (<span class="dia">◆</span> até 5)</td><td>Incluídos (<span class="dia">◆</span> até 10)</td></tr>
+            <tr><th>Artes de impressos</th><td>—</td><td class="col-rec">Sim</td><td>Sim, com mais variações</td></tr>
+            <tr><th>Plano de visitas e plantões</th><td>—</td><td class="col-rec">Sim</td><td>Sim, com acompanhamento presencial</td></tr>
+            <tr><th>Parcerias e mídia local</th><td>—</td><td class="col-rec">Roteiro de abordagem</td><td>Abordagem ativa e assessoria de imprensa</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 INVESTIMENTO -->
+<section id="investimento" class="divider">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label rv"><span class="n">07 / 11</span>Investimento</div>
+        <h2 class="rv">Cada real <span class="hl">no seu lugar.</span></h2>
+      </div>
+      <p class="lead rv">Os valores são apresentados <strong>separados</strong>, para você ver exatamente pelo que está pagando.</p>
+    </div>
+
+    <div class="rv">
+      <div class="inv-head"><span class="letter">A</span><h3>Pagamento à agência</h3><p>Gestão e vídeos.</p></div>
+      <p class="scroll-hint">Arraste para o lado →</p>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th></th><th>Essencial</th><th class="col-rec">Completo</th><th>Premium</th></tr></thead>
+          <tbody>
+            <tr><th>Mensalidade</th><td>R$ 2.500</td><td class="col-rec">R$ 3.900</td><td>R$ 5.500</td></tr>
+            <tr><th>Total de gestão (3 mensalidades)</th><td><strong>R$ 7.500</strong></td><td class="col-rec"><strong>R$ 11.700</strong></td><td><strong>R$ 16.500</strong></td></tr>
+            <tr><th>Vídeos com IA <span class="dia">◆</span> <span style="font-weight:400;color:var(--muted)">(10 vídeos × R$ 250 no Essencial)</span></th><td>R$ 2.500</td><td class="col-rec">Incluídos</td><td>Incluídos</td></tr>
+            <tr class="total"><th>Total pago à agência</th><td>R$ 10.000</td><td class="col-rec">R$ 11.700</td><td>R$ 16.500</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tbl-cap">Período: 15/11/2026 a 15/02/2027 (3 meses). Custos de campo (impressão, faixas, brindes, produção de evento) são pagos ao custo, sem margem da agência, e aprovados antes pela escola.</p>
+    </div>
+
+    <div class="card rv" style="margin-top:56px">
+      <div class="inv-head" style="margin-bottom:6px"><span class="letter" style="background:var(--lilac);color:var(--bg)">B</span><h3>Verba de anúncios</h3><p>Paga direto às plataformas pela escola. Recomendada, sem comissão da agência e fora dos valores acima.</p></div>
+      <div class="ads-viz">
+        <div class="ads-m"><span>Nov · a partir do dia 15</span><b>R$ 2.200</b><div class="stack"><div style="flex:1500"></div><div style="flex:700"></div></div><small>Meta R$ 1.500<br>Google R$ 700</small></div>
+        <div class="ads-m"><span>Dez</span><b>R$ 2.900</b><div class="stack"><div style="flex:2000"></div><div style="flex:900"></div></div><small>Meta R$ 2.000<br>Google R$ 900</small></div>
+        <div class="ads-m"><span>Jan</span><b>R$ 3.700</b><div class="stack"><div style="flex:2500"></div><div style="flex:1200"></div></div><small>Meta R$ 2.500<br>Google R$ 1.200</small></div>
+        <div class="ads-m"><span>Fev · até o dia 15</span><b>R$ 1.200</b><div class="stack"><div style="flex:800"></div><div style="flex:400"></div></div><small>Meta R$ 800<br>Google R$ 400</small></div>
+      </div>
+      <div class="mix-leg" style="margin-top:18px"><span><i style="background:var(--blue2)"></i>Meta Ads</span><span><i style="background:var(--lilac)"></i>Google Ads</span></div>
+      <div class="note" style="margin-top:24px"><span class="diam">◆</span><div><strong>Mínimo viável: R$ 6.000 no período.</strong> Abaixo disso as metas de leads ficam inviáveis.</div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 08 METAS -->
+<section id="metas" class="divider">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label rv"><span class="n">08 / 11</span>Metas de referência e retorno</div>
+        <h2 class="rv">O que <span class="hl">medimos.</span></h2>
+      </div>
+      <p class="lead rv"><em>Metas de referência, não promessa de matrículas.</em> As matrículas também dependem de atendimento, preço, andamento da obra e concorrência. Por isso medimos cada etapa e ajustamos rápido.</p>
+    </div>
+    <div class="kpis">
+      <div class="card kpi rv"><small>Leads (famílias que entram em contato)</small><div class="big">400–600</div><div class="meter"><i style="left:0;width:100%"></i></div></div>
+      <div class="card kpi rv"><small>Custo por lead</small><div class="big">R$ 12–35</div><div class="sub">Alvo: abaixo de R$ 25</div></div>
+      <div class="card kpi rv"><small>Visitas / conversas agendadas</small><div class="big">100–150</div><div class="meter"><i style="left:0;width:25%"></i></div></div>
+      <div class="card kpi rv"><small>Pré-matrículas</small><div class="big">40–70</div><div class="meter"><i style="left:0;width:11%"></i></div></div>
+    </div>
+    <div class="card rv" style="margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+      <span><span class="dot" style="display:inline-block;margin-right:12px;vertical-align:middle"></span>Resposta no WhatsApp</span>
+      <strong style="font-family:var(--display);font-stretch:110%;font-size:22px;letter-spacing:-.02em">até 10 min, em horário comercial</strong>
+    </div>
+
+    <div class="card rv" style="margin-top:40px">
+      <div class="roi">
+        <div>
+          <div class="label">Exemplo de retorno · ilustrativo</div>
+          <h3 style="margin-top:18px;font-size:clamp(26px,3vw,38px)">Menos de <span class="hl">1 matrícula</span> no ano.</h3>
+          <p class="muted" style="margin-top:16px"><span class="dia">◆</span> Com mensalidade de R$ 1.350 (12 parcelas), cada aluno representa R$ 16.200 por ano. O valor pago à agência no pacote Completo com vídeos incluídos (R$ 11.700) equivale a <strong>cerca de 3/4 de um aluno</strong>, ou seja, menos de 1 matrícula no ano. A verba de anúncios é um investimento à parte, pago diretamente às plataformas.</p>
+        </div>
+        <div class="card-inner roi-viz">
+          <div class="roi-bar"><span>1 aluno por ano <b>R$ 16.200</b></span><div><i style="width:100%;background:rgba(155,155,255,.35)"></i></div></div>
+          <div class="roi-bar"><span>Pacote Completo (3 meses, vídeos incluídos) <b>R$ 11.700</b></span><div><i style="width:72.2%;background:linear-gradient(90deg,var(--blue),#8f93ff)"></i></div></div>
+          <p class="mono" style="color:var(--dim);font-size:10.5px;letter-spacing:.14em">≈ 3/4 de um aluno</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 PREMISSAS -->
+<section id="premissas" class="divider">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label rv"><span class="n">09 / 11</span>Premissas a confirmar</div>
+        <h2 class="rv">Seis pontos para <em class="hl">alinhar.</em></h2>
+      </div>
+      <p class="lead rv">Enquanto esses itens não estiverem confirmados, <strong>não divulgamos nenhuma informação</strong> (vagas, horários, valores, datas) que a escola não tenha aprovado.</p>
+    </div>
+    <div class="prem">
+      <div class="card rv"><span class="n">◆ 01</span><h4>Início das aulas em <strong>fevereiro de 2027</strong></h4><p class="chg"><b>Se for diferente, muda</b>Cronograma e pico de verba</p></div>
+      <div class="card rv"><span class="n">◆ 02</span><h4>Verba de anúncios de <strong>R$ 10.000</strong> (mín. R$ 6.000), paga pela escola</h4><p class="chg"><b>Se for diferente, muda</b>Número de leads esperado</p></div>
+      <div class="card rv"><span class="n">◆ 03</span><h4>A escola fornece <strong>planta baixa e projeto arquitetônico</strong> (e modelo 3D, se houver)</h4><p class="chg"><b>Se for diferente, muda</b>Prazo e valor dos vídeos</p></div>
+      <div class="card rv"><span class="n">◆ 04</span><h4>Há <strong>vagas e séries definidas</strong>, mensalidade e condição de fundador a confirmar (mensalidade de R$ 1.350 já informada)</h4><p class="chg"><b>Se for diferente, muda</b>Mensagem das campanhas e cálculo de retorno</p></div>
+      <div class="card rv"><span class="n">◆ 05</span><h4>A escola terá <strong>WhatsApp oficial</strong> e alguém para responder em até 10 min no horário comercial</h4><p class="chg"><b>Se for diferente, muda</b>Conversão em visitas e matrículas</p></div>
+      <div class="card rv"><span class="n">◆ 06</span><h4>Visitas à obra serão liberadas com segurança, em grupos pequenos</h4><p class="chg"><b>Se for diferente, muda</b>Vídeos da obra e plano de visitas</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 CONDIÇÕES -->
+<section id="condicoes" class="divider">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label rv"><span class="n">10 / 11</span>Condições</div>
+        <h2 class="rv">Regras <span class="hl">claras.</span></h2>
+      </div>
+      <p class="lead rv">As contas são sempre da escola. O trabalho fica com vocês.</p>
+    </div>
+    <div class="cond rv">
+      <div><span>Vigência</span><p>15/11/2026 a 15/02/2027. Depois dessa data, a continuidade (renovação) será combinada entre as partes, com valores a definir.</p></div>
+      <div><span>Pagamento</span><p>Mensalidade todo dia 15, a partir de 15/11; vídeos: pagos conforme a entrega.</p></div>
+      <div><span>Contas</span><p>Anúncios, Instagram e página ficam sempre no nome da escola.</p></div>
+      <div><span>Responsabilidades da escola</span><p>Informações corretas e aprovadas, resposta ágil aos contatos, acesso à obra com segurança, autorizações de imagem.</p></div>
+      <div><span>Rescisão</span><p>Aviso prévio de 30 dias.</p></div>
+      <div><span>Sigilo e LGPD</span><p>Dados de famílias e alunos tratados conforme a lei.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 PRÓXIMOS PASSOS -->
+<section id="proximos" class="divider">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label rv"><span class="n">11 / 11</span>Próximos passos</div>
+        <h2 class="rv">Do sim ao <em class="hl">primeiro anúncio.</em></h2>
+      </div>
+      <p class="lead rv">Implantação em até 48 horas após a assinatura.</p>
+    </div>
+    <ol class="next rv">
+      <li>Escolher o pacote de gestão</li>
+      <li>Confirmar as premissas da seção 09 (pode ser por uma ligação de 15 minutos)</li>
+      <li>Enviar planta baixa/projeto e os acessos às contas</li>
+      <li>Assinatura e início da implantação em até 48 horas</li>
+      <li>Primeiras campanhas no ar em até 7 dias; vídeo inicial em até 5 dias</li>
+    </ol>
+
+    <div class="cta rv">
+      <div class="glow" style="width:480px;height:480px;background:#9b9bff;top:-240px;right:-120px;opacity:.35"></div>
+      <div style="position:relative;z-index:1">
+        <span class="pill" style="background:rgba(6,10,26,.35);border-color:rgba(243,241,234,.3)"><span class="dot"></span>Implantação em até 48 horas</span>
+        <h2>Cada semana conta. <span class="hl">Vamos começar?</span></h2>
+        <p>Escolha o pacote, confirme as premissas em uma ligação de 15 minutos e as primeiras campanhas entram no ar em até 7 dias.</p>
+        <div class="btns">
+          <a href="https://wa.me/5547984817845?text=Ol%C3%A1!%20Vi%20a%20proposta%20do%20Col%C3%A9gio%20Lideran%C3%A7a%20e%20quero%20conversar." target="_blank" rel="noopener" class="btn btn-blue">Conversar no WhatsApp <svg viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="cta-foot mono" style="font-size:11.5px"><span>Colégio Liderança COC · Barra Velha</span><span>Proposta válida por 7 dias</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo" style="font-size:18px"><i style="width:15px;height:15px"></i>Braza Labz</span>
+    <span class="mono" style="font-size:11px">Proposta · Colégio Liderança COC · 13/11/2026</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e)});
+  window.addEventListener('beforeprint',function(){els.forEach(function(e){e.classList.add('in')})});
+})();
+</script>
+</body>
+</html>
